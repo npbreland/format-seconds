@@ -1,6 +1,6 @@
 #!/bin/bash
 
-seconds=$1
+seconds=$(</dev/stdin)
 
 if [ $seconds -gt 3600 ]; then
     hours=$((seconds / 3600))
