@@ -7,11 +7,11 @@ if [ $seconds -gt 3600 ]; then
     minutes=$((seconds / 60))
     minutes_beyond=$((minutes % 60))
     seconds_beyond=$((seconds % 60))
-    echo "$hours:$minutes_beyond:$seconds_beyond"
+    printf "%02d:%02d:%02d\n" $hours $minutes_beyond $seconds_beyond
 elif [ $seconds -gt 60 ]; then
     minutes=$((seconds / 60))
     seconds_beyond=$((seconds % 60))
-    echo "$minutes:$seconds_beyond"
+    printf "%02d:%02d\n" $minutes $seconds_beyond
 else
     echo $seconds
 fi
